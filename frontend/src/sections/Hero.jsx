@@ -32,13 +32,15 @@ export default function Hero() {
         </div>
 
         {/* IMAGE */}
-        <div className="flex justify-center">
-          <img
-            src="/public/uploads/products/yassa-poulet.jpg"
-            alt="Plat sénégalais Ndank Food"
-            className="rounded-2xl shadow-lg max-h-[420px] object-cover"
-          />
-        </div>
+<div className="flex justify-center">
+  <img
+  src="http://127.0.0.1:8000/uploads/products/yassa-poulet.jpg"
+  alt="Plat sénégalais Ndank Food"
+  className="rounded-2xl shadow-lg max-h-[420px] object-cover"
+/>
+
+</div>
+
 
       </div>
     </section>
