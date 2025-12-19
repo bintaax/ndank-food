@@ -1,33 +1,45 @@
-import { ShoppingCart, Phone } from "lucide-react"
+import { Phone } from "lucide-react"
+import { Link } from "react-router-dom"
 
 export default function Navbar() {
   return (
-    <div className="navbar sticky top-0 z-10 bg-base-100 shadow-sm px-6">
-      {/* Logo / Nom */}
+    <div className="navbar sticky top-0 z-20 bg-base-100 shadow-sm px-6">
+      
+      {/* Logo */}
       <div className="flex-1">
-        <a className="text-2xl font-bold text-accent" href="/">
-          <img src="/logo.png" alt="Ndank FoodLogo" className="inline-block" style={{ width: '120px' }} />  
-        </a>
+        <Link to="/">
+          <img
+            src="/logo.png"
+            alt="Ndank Food logo"
+            className="w-20"
+          />
+        </Link>
       </div>
 
-      {/* Menu */}
+      {/* Navigation */}
       <div className="hidden md:flex gap-6 text-accent">
-        <a className="hover:text-primary">Accueil</a>
-        <a className="hover:text-primary">Menu</a>
-        <a className="hover:text-primary">Commander</a>
-        <a className="hover:text-primary">Contact</a>
+        <Link to="/" className="hover:text-primary">
+          Accueil
+        </Link>
+
+        <Link to="/menu" className="hover:text-primary">
+          Menu
+        </Link>
+
+    
       </div>
 
-      {/* Actions */}
-      <div className="flex gap-3 ml-4">
-        <button className="btn btn-ghost btn-circle text-accent">
-          <ShoppingCart size={22} />
-        </button>
-
-        <button className="btn btn-primary hidden sm:flex gap-2">
+      {/* Action principale */}
+      <div className="ml-4">
+        <a
+          href="https://wa.me/33656837572"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary flex gap-2"
+        >
           <Phone size={18} />
           Commander
-        </button>
+        </a>
       </div>
     </div>
   )
